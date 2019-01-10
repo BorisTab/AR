@@ -44,10 +44,10 @@ function getCoordinate(event) {
 }
 $('document').ready(function () {
     $(".coordinate-send").submit(function() {
-        $('#right-up-lat').value = rightUpLat;
-        $('#right-up-lng').value = rightUpLng;
-        $('#left-bottom-lat').value = leftDownLat;
-        $('#left-bottom-lng').value = leftDownLng;
+        $('#right-up-lat').val(rightUpLat);
+        $('#right-up-lng').val(rightUpLng);
+        $('#left-bottom-lat').val(leftDownLat);
+        $('#left-bottom-lng').val(leftDownLng);
 
         let th = $(this);
         $.ajax({

@@ -30,7 +30,11 @@ h1 {
     background-color: #fcc422;
     border: none;
     height: 30px;
+    width: 80px;
     border-radius: 5px;
+    position: absolute;
+    bottom: 5px;
+    left: calc(50% - 40px);
 }
 
 #form-button:hover {

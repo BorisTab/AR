@@ -14,12 +14,13 @@ html, body {
   z-index: 99;
   left: 0;
   bottom: 0;
-  margin: 0;
   width: 300px;
+  min-height: 90%;
   height: 100%;
   background-color: #fff;
-  transition: 2s; }
-  .form .menu-button-open {
+  transition: 2s;
+  overflow: auto; }
+  .menu-button-open, .menu-mobile {
     display: inline-block;
     cursor: pointer;
     left: 5px;
@@ -29,8 +30,7 @@ html, body {
     border-radius: 5px;
     z-index: 999;
     background-color: #fff; }
-  .form .exit-button {
-    display: table;
+  .form .exit-button, .form .map-button {
     background-color: #0071f0;
     border: none;
     height: 30px;
@@ -38,17 +38,16 @@ html, body {
     border-radius: 5px;
     position: absolute;
     top: 5px;
-    right: 5px;
     text-align: center; }
-    .form .exit-button p {
+    .form .exit-button p, .form .map-button p {
       display: table-cell;
       color: #fff;
       vertical-align: middle; }
-    .form .exit-button:hover {
+    .form .exit-button:hover, .form .map-button:hover {
       outline: none;
       background-color: #57a5ff;
       cursor: pointer; }
-    .form .exit-button:focus {
+    .form .exit-button:focus, .form .map-button:focus {
       outline: none; }
   .form h1 {
     color: #000;
@@ -65,8 +64,7 @@ html, body {
     height: 30px;
     width: 80px;
     border-radius: 5px;
-    position: absolute;
-    bottom: 5px;
+    margin: 10px;
     left: calc(50% - 40px); }
     .form #form-button:hover {
       outline: none;
@@ -75,8 +73,10 @@ html, body {
     .form #form-button:focus {
       outline: none; }
   .form .history-block {
-    height: 40%;
-    overflow: auto; }
+    overflow: auto;
+    width: 100%;
+    height: 44vh;
+    min-height: 115px; }
     .form .history-block .history-cell {
       background-color: #0071f0;
       margin: 5px;
@@ -122,5 +122,26 @@ section {
     section .menu-button-close .bar3 {
       width: 20px;
       transform: rotate(45deg) translateX(-7px); }
+
+.exit-button {
+  display: table;
+  right: 5px; }
+
+.menu-mobile, .map-button {
+  display: none; }
+
+@media screen and (max-width: 500px) {
+  .form {
+    width: 100%; }
+
+  .map-button {
+    display: table;
+    right: 100px; }
+
+  .menu-mobile {
+    position: absolute; }
+
+  .history-block {
+    height: 400px; } }
 
 /*# sourceMappingURL=ar.css.map */

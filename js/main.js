@@ -153,12 +153,22 @@ $('document').ready(function () {
     ////////     UI     //////////
 
     $('.menu-button-open').click(function () {
-        $('.form').css('left', '100%');
+        // $('.form').css('left', '100%');
         $('section').css('right', '0');
     });
     $('.menu-button-close').click(function () {
         $('.form').css('left', '0');
         $('section').css('right', '100%');
+    });
+    $('.map-button').click(function () {
+        $('.form').css('left', '-500px');
+        setTimeout(function () {
+            $('.menu-mobile').css('display', 'inline-block');
+        }, 1000);
+    });
+    $('.menu-mobile').click(function () {
+        $('.menu-mobile').css('display', 'none');
+        $('.form').css('left', '0');
     });
 
     let cell_1 = new ObjectsCell(1, 'https://media.dobrf.ru/backend/pictures/65936eda51b241868c73711858ac37ef.large.jpg',

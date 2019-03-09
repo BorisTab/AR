@@ -170,6 +170,7 @@ $('document').ready(function () {
         $('.menu-mobile').css('display', 'none');
         $('.form').css('left', '0');
     });
+
     let hideCheck = false;
     $('.hide-button').click(function () {
         if(!hideCheck) {

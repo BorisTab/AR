@@ -170,6 +170,20 @@ $('document').ready(function () {
         $('.menu-mobile').css('display', 'none');
         $('.form').css('left', '0');
     });
+    let hideCheck = false;
+    $('.hide-button').click(function () {
+        if(!hideCheck) {
+            $('.form').css('left', '-300px');
+            $(this).css('left', '0');
+            $('.arrow-block').css('transform', 'rotate(180deg)');
+            hideCheck = true
+        } else {
+            $('.form').css('left', '0');
+            $(this).css('left', '300px');
+            $('.arrow-block').css('transform', 'rotate(0)');
+            hideCheck = false;
+        }
+    });
 
     let cell_1 = new ObjectsCell(1, 'https://media.dobrf.ru/backend/pictures/65936eda51b241868c73711858ac37ef.large.jpg',
         'Название из БД');
